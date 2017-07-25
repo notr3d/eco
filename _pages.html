@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Ecomilk</title>
+    <link type="image/png" rel="shortcut icon" href="img/favicon.png" />
+    <style>html{display:none;}</style>
+</head>
+<body>
+    <div style="max-width:500px; margin:0 auto; padding:100px 0;">
+
+        <p><a href="index.html">Главная</a></p><br />
+        <p><a href="blog.html">Журнал +</a></p><br />
+        <p><a href="blog-post-article.html">Статья +</a></p><br />
+        <p><a href="blog-post-recipe.html">Рецепт +</a></p><br />
+        <p><a href="blog-post-trick.html">Хитрости +</a></p><br />
+        <p><a href="vacancies.html">Карьера (вакансии) +</a></p><br />
+        <p><a href="contacts.html">Контакты</a></p><br />
+        <p><a href="404.html">404 ошибка+</a></p><br />
+        <p><a href="partners.html">Партнеры</a></p><br />
+        <p><a href="#">Товар</a></p><br />
+        <p><a href="about.html">Кто мы</a></p><br />
+        <p><a href="production.html">Производство</a></p><br />
+        <p><a href="press-center.html">Пресс-центр</a></p><br />
+        <p><a href="news.html">Новость</a></p><br />
+    </div>
+
+    <script type="text/javascript">
+        var own_url = '';
+    
+        var globalInit = function () {
+            var cont = document.getElementsByTagName('head')[0];
+    
+            var loadCSS = function (href) {
+                var ss = document.createElement('link');
+    
+                ss.rel = 'stylesheet';
+                ss.href = href;
+                ss.media = 'only x';
+    
+                cont.appendChild(ss);
+    
+                setTimeout(function () {
+                    ss.media = 'all';
+                }, 0);
+            }
+            loadCSS('css/style.css?nocache=' + (Math.random() * 1000000));
+    
+            var js = document.createElement('script');
+            js.src = 'js/main.js?nocache=' + (Math.random() * 1000000);
+            cont.appendChild(js);
+        }
+    
+        if (window.addEventListener)
+            window.addEventListener('load', globalInit, false);
+        else if (window.attachEvent)
+            window.attachEvent('onload', globalInit);
+        else
+            window.onload = globalInit;
+    </script>
+</body>
+</html>
